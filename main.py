@@ -38,6 +38,7 @@ origins = [
     "http://localhost",
     "http://localhost:3000", # Puerto común para aplicaciones React/Vite
     "http://localhost:5173",
+    "https://todo-app-frontend-m75j.onrender.com",
     # ¡IMPORTANTE! Cuando despliegues tu frontend, añade aquí su URL de producción (ej. "https://tu-frontend.onrender.com")
 ]
 

@@ -37,6 +37,7 @@ app = FastAPI()
 origins = [
     "http://localhost",
     "http://localhost:3000", # Puerto común para aplicaciones React/Vite
+    "http://localhost:5173",
     # ¡IMPORTANTE! Cuando despliegues tu frontend, añade aquí su URL de producción (ej. "https://tu-frontend.onrender.com")
 ]
 

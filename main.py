@@ -82,6 +82,13 @@ async def test_db_connection(db: Session = Depends(get_db)):
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=f"Database connection failed: {e}")
 
 # --- Rutas de Usuarios ---
+@app.options("/register", status_code=status.HTTP_200_OK)
+async def options_register():
+    """
+    Maneja las peticiones OPTIONS para la ruta /register.
+    Esto es necesario para CORS preflight requests.
+    """
+    return {} # Devuelve una respuesta vacía con status 200 OK
 
 @app.post("/register", response_model=UserInDB, status_code=status.HTTP_201_CREATED)
 def register_user_fastapi(user: UserCreate, db: Session = Depends(get_db)):
